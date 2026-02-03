@@ -6,3 +6,5 @@ This is a contract system that I have been working on simultaneously with other 
 The code is mostly written by me but with some help from AI, but I always verifed the code before it went to production and I also did most of the debugging by myself. Also a bit of note to this is that there some dev things that were include with prod and that was because it was only meant as a internal program/system.
 
 There is also alot of weird decisions by me in this project, but hey it worked and that makes me happy :)
+
+![commits main]("https://github.com/shadowrake/shadowrake.github.io/blob/master/public/Skjermbilde2026-02-03162046.png?raw=true")
