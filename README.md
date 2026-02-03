@@ -1,5 +1,5 @@
 # Contractsystem for sales and other things
-NOTE: The contract system I created mostly on my own for my previous employer (I have written constent which allowed me to publish this project, since it's also not in use anymore)
+NOTE: The contract system I created mostly on my own for my previous employer (I have written constent which allow me to publish this project, since it's also not in use anymore)
 
 This is a contract system that I have been working on simultaneously with other work reponseabilities. This is also my first big project and was only worked on when i had little to do or if there was a huge bug or feature that was going to added/fixed
 
