@@ -7,4 +7,8 @@ The code is mostly written by me but with some help from AI, but I always verife
 
 There is also alot of weird decisions by me in this project, but hey it worked and that makes me happy :)
 
-![commits main]("https://github.com/shadowrake/shadowrake.github.io/blob/master/public/Skjermbilde2026-02-03162046.png?raw=true")
+Amount of main commits
+![commits main](https://raw.githubusercontent.com/shadowrake/shadowrake.github.io/refs/heads/master/public/Skjermbilde2026-02-03162046.png?token=GHSAT0AAAAAADTEWQBL5GMY4D6O75QRU2EE2MCGYEQ)
+
+Amount of dev commits
+![commits dev](https://raw.githubusercontent.com/shadowrake/shadowrake.github.io/refs/heads/master/public/Skjermbilde2026-02-03162241.png?token=GHSAT0AAAAAADTEWQBL5Q2ZCTOTMU3ZH6ZE2MCG6EA)
