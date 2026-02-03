@@ -1,0 +1,168 @@
+-- WARNING: This schema is for context only and is not meant to be run.
+-- Table order and constraints may not be valid for execution.
+
+CREATE TABLE public.contracts (
+  seller text NOT NULL,
+  buyer text,
+  orgnr text,
+  contact text,
+  email text,
+  phone text,
+  address text,
+  input json,
+  total text,
+  comment text,
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id uuid,
+  deletion text DEFAULT 'deletion'::text,
+  environment text DEFAULT 'View'::text,
+  status text DEFAULT 'underReview'::text,
+  date timestamp with time zone DEFAULT (now() AT TIME ZONE 'utc'::text),
+  seller_email character varying,
+  avvis_kom text DEFAULT ''::text,
+  purre_counter bigint DEFAULT '0'::bigint,
+  seller_phone text,
+  CONSTRAINT contracts_pkey PRIMARY KEY (id),
+  CONSTRAINT contracts_user_id_fkey FOREIGN KEY (user_id) REFERENCES auth.users(id)
+);
+CREATE TABLE public.contracts_fiber (
+  seller text NOT NULL,
+  buyer text,
+  orgnr text,
+  contact text,
+  email text,
+  phone text,
+  address text,
+  input json,
+  total text,
+  comment text,
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id uuid,
+  deletion text DEFAULT 'deletion'::text,
+  environment text DEFAULT 'View'::text,
+  status text DEFAULT 'underReview'::text,
+  date timestamp with time zone DEFAULT (now() AT TIME ZONE 'utc'::text),
+  seller_email character varying,
+  avvis_kom text DEFAULT ''::text,
+  purre_counter bigint DEFAULT '0'::bigint,
+  seller_phone text,
+  CONSTRAINT contracts_fiber_pkey PRIMARY KEY (id),
+  CONSTRAINT contracts_fiber_user_id_fkey FOREIGN KEY (user_id) REFERENCES auth.users(id)
+);
+CREATE TABLE public.contracts_temp (
+  seller text NOT NULL,
+  buyer text,
+  orgnr text,
+  contact text,
+  email text,
+  phone text,
+  address text,
+  input json,
+  total text,
+  comment text,
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id uuid,
+  deletion text DEFAULT 'deletion'::text,
+  environment text DEFAULT 'View'::text,
+  status text DEFAULT 'Utkast'::text,
+  date timestamp with time zone DEFAULT (now() AT TIME ZONE 'utc'::text),
+  seller_email character varying,
+  avvis_kom text DEFAULT ''::text,
+  purre_counter bigint DEFAULT '0'::bigint,
+  seller_phone text,
+  CONSTRAINT contracts_temp_pkey PRIMARY KEY (id),
+  CONSTRAINT contracts_temp_user_id_fkey FOREIGN KEY (user_id) REFERENCES auth.users(id)
+);
+CREATE TABLE public.contracts_temp_mock (
+  seller text NOT NULL,
+  buyer text,
+  orgnr text,
+  contact text,
+  email text,
+  phone text,
+  address text,
+  input json,
+  total text,
+  comment text,
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id uuid,
+  deletion text DEFAULT 'deletion'::text,
+  environment text DEFAULT 'View'::text,
+  status text DEFAULT 'underReview'::text,
+  date timestamp with time zone DEFAULT (now() AT TIME ZONE 'utc'::text),
+  seller_email character varying,
+  avvis_kom text DEFAULT ''::text,
+  purre_counter bigint DEFAULT '0'::bigint,
+  CONSTRAINT contracts_temp_mock_pkey PRIMARY KEY (id),
+  CONSTRAINT contracts_temp_mock_user_id_fkey FOREIGN KEY (user_id) REFERENCES auth.users(id)
+);
+CREATE TABLE public.countries (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  name text NOT NULL,
+  short_name text,
+  prefix text,
+  CONSTRAINT countries_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.produkter (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  name text NOT NULL,
+  description text,
+  price bigint DEFAULT '0'::bigint,
+  checked boolean DEFAULT false,
+  comment text,
+  category text,
+  order_num smallint,
+  CONSTRAINT produkter_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.produkter_egendef (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  name text,
+  description text,
+  price bigint DEFAULT '0'::bigint,
+  checked boolean DEFAULT false,
+  comment text,
+  category text,
+  order_num smallint,
+  CONSTRAINT produkter_egendef_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.produkter_fiber (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  name text NOT NULL,
+  description text,
+  price text,
+  checked boolean DEFAULT false,
+  comment text,
+  category text,
+  order_num smallint,
+  CONSTRAINT produkter_fiber_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.produkterse (
+  id integer NOT NULL,
+  name character varying NOT NULL,
+  description text,
+  price integer,
+  checked boolean DEFAULT false,
+  comment double precision,
+  CONSTRAINT produkterse_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.profiles (
+  id uuid NOT NULL,
+  first_name text,
+  last_name text,
+  role text,
+  user_email character varying,
+  user_phone text,
+  canMakeEgendef boolean DEFAULT false,
+  canMakeStorDeal boolean DEFAULT false,
+  canSellFiber boolean DEFAULT false,
+  CONSTRAINT profiles_pkey PRIMARY KEY (id),
+  CONSTRAINT profiles_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id)
+);
+CREATE TABLE public.sent_contracts (
+  resend_id uuid NOT NULL,
+  message_id text,
+  contract_id text,
+  to text,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  CONSTRAINT sent_contracts_pkey PRIMARY KEY (resend_id)
+);

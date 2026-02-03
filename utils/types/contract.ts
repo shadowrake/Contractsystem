@@ -1,0 +1,23 @@
+type Contract = {
+    id: string;
+    seller: string;
+    buyer: string;
+    orgnr: string;
+    contact: string;
+    email: string;
+    phone: string;
+    address: string;
+    input: { name: string; id: string; comment: string; description: string}[];
+    total: number;
+    comment: string;
+    status: string;
+    environment: string;
+    date: Date;
+    updated: string;
+    deleted: string;
+    avvis_kom: string;
+    purre_counter: number;
+    seller_phone: string | undefined;
+    seller_email: string | undefined;
+    user_id: string;
+};
