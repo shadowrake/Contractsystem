@@ -1,7 +1,7 @@
 # Contractsystem for sales and other things
 NOTE: The contract system I created mostly on my own for my previous employer (I have written constent which allow me to publish this project, since it's also not in use anymore). Also some functionality may have gotten lost when I cleaned the code for the public publish. 
 
-Tech stack: Next.js, Supabase(auth and DB (DB structure in project)), a mobil service (I.E Twillio(tested), Sveve(Norwegian, tested) and similar mobile to-way services), Resend, Tailwind.
+Tech stack: Next.js, Supabase(auth and DB (DB structure in project)), a mobil service (I.E Twillio(tested), Sveve(Norwegian, tested) and similar mobile to-way services), Resend, Tailwind and a hosting service to host the site for the api webhooks to work (I used netlify for this).
 
 This is a contract system that I have been working on simultaneously with other work reponseabilities. This is also my first big project and was only worked on when i had little to do or if there was a huge bug or feature that was going to added/fixed
 
