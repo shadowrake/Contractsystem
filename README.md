@@ -9,8 +9,10 @@ The code is mostly written by me but with some help from AI, but I always verife
 
 There is also alot of weird decisions by me in this project, but hey it worked and that makes me happy :)
 
-Amount of main commits
+Amount of main commits*
 ![commits main](https://shadowrake.github.io/Skjermbilde2026-02-03162046.png)
 
-Amount of dev commits
+Amount of dev commits*
 ![commits dev](https://shadowrake.github.io/Skjermbilde2026-02-03162241.png)
+
+*All commits are by me, pictures is just meant show how much work went in to the project. Since there is a certain pride in this being my first big project and I'm honoured to show it off.
