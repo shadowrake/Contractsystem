@@ -18,3 +18,7 @@ Amount of dev commits*
 ![commits dev](https://shadowrake.github.io/Skjermbilde2026-02-03162241.png)
 
 *All commits are by me, pictures is just meant show how much work went in to the project. Since there is a certain pride in this being my first big project and I'm honoured to show it off.
+
+Here are some screengrabs from the program
+
+![Dashboard](https://shadowrake.github.io/home.png)
