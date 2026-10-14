@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
-
+// @ts-expect-error -- Global CSS is handled by Next.js at build time.
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
