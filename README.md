@@ -21,4 +21,16 @@ Amount of dev commits*
 
 Here are some screengrabs from the program
 
+### Dashboard
 ![Dashboard](https://shadowrake.github.io/home.png)
+### Create a contract
+![Make a contract part 1](https://shadowrake.github.io/top_makekontrakt.png)
+![Make a contract part 2](https://shadowrake.github.io/midtop_makekontrakt.png)
+![Make a contract part 3](https://shadowrake.github.io/mid_makekontrakt.png)
+![Make a contract part 4](https://shadowrake.github.io/midend_makekontrakt.png)
+![Make a contract part 5](https://shadowrake.github.io/end_makekontrakt.png)
+### Create a custom/for bigger deals contract
+![custom/for bigger deals contract](https://shadowrake.github.io/kontrakt_eks_egendef.png)
+### Contract site
+![Contract site part 1](https://shadowrake.github.io/top_kontrakt.png)
+![Contract site part 2](https://shadowrake.github.io/end_kontrakt.png)
