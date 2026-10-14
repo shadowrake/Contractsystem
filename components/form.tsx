@@ -154,9 +154,48 @@ export default function Form({ users, produkter, countries }: { users: Users[], 
         return;
       }
     
+      const result = await sendContract(data);
       setData(data);
     
+      if (result?.success) {
+        console.log({ data: result.data });
+        toast.success('Contract sent');
+        const generateMessageBody = (input: { comment: string; name: string; description: string }[]) => {
+          let messageBody = `Hei, \nDu har nettopp kjøpt tjenesten/tjenestene: \n`;
 
+          input.forEach(item => {
+            if (item.comment.trim() !== '') {
+              messageBody += `${item.name}: \n${item.comment}\n${item.description}\n\n`;
+            }
+          });
+
+        };
+        if(agreed === true){
+            try {
+          const messageBody = generateMessageBody(input);
+          const response = await fetch('/api/sms', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              to: `${data.phone}`, 
+              body: messageBody,
+            }),
+          });
+          const smsData = await response.json();
+          console.log('SMS sent with SID:', smsData.sid);
+        } catch (error) {
+          console.error('Failed to send SMS:', error);
+        }
+        }
+        reset();
+        window.location.href = '/dashboard';
+        return;
+      }
+    
+
+      console.log(result?.error);
       toast.error('Contract failed to send');
     }
     }
